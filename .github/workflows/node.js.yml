@@ -7,6 +7,12 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_call:
+    secrets:
+      WEB_HOOKS:
+        required: true
+      WEB_HOOKS_SCRETT:
+        required: true
     
 env:
   WEB_HOOKS: ${{ secrets.WEB_HOOKS }}
