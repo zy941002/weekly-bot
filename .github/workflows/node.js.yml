@@ -26,8 +26,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
+
+    - name: Set the secret
+      with: # Set the secret as an input
+        WEB_HOOKS: ${{ secrets.WEB_HOOKS }}        
+        WEB_HOOKS_SCRETT: ${{ secrets.WEB_HOOKS_SCRETT }}
+      
     - run: yarn
     - run: yarn schedule
       env:
-          WEB_HOOKS: ${{ secrets.secrets.WEB_HOOKS }}
-          WEB_HOOKS_SCRETT: ${{ secrets.secrets.WEB_HOOKS_SCRETT }}
+          WEB_HOOKS: ${{ secrets.WEB_HOOKS }}
+          WEB_HOOKS_SCRETT: ${{ secrets.WEB_HOOKS_SCRETT }}
