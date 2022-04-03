@@ -28,6 +28,6 @@ jobs:
         cache: 'yarn'
     - run: yarn
     - run: yarn schedule
-          env:
+      env:
           WEB_HOOKS: ${{ secrets.secrets.WEB_HOOKS }}
           WEB_HOOKS_SCRETT: ${{ secrets.secrets.WEB_HOOKS_SCRETT }}
