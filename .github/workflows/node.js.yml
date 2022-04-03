@@ -28,7 +28,7 @@ jobs:
         cache: 'yarn'
     - run: yarn
     - uses: secrethub/actions/env-export@v0.1.0
-          env:
+      env:
           WEB_HOOKS: ${{ secrets.WEB_HOOKS }}
           WEB_HOOKS_SCRETT: ${{ secrets.WEB_HOOKS_SCRETT }}
     - run: yarn schedule
