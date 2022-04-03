@@ -10,7 +10,7 @@ on:
 
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron: "25 14 * * Mon"
+    - cron: "30 14 * * sun"
     
 env:
   WEB_HOOKS: ${{ secrets.WEB_HOOKS }}
