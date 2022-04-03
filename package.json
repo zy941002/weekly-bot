@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "unbuild",
-    "schedule": "node './**/*.{ts}' --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm' src/index.ts",
+    "schedule": "node --experimental-specifier-resolution=node --loader ts-node/esm src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -1,2 +1,1 @@
 # weekly-bot
-# weekly-bot
