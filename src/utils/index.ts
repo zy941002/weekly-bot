@@ -5,8 +5,8 @@ export function parseHTML(html: string) {
   const result: any[]= []
    $('.mainlink a').each((_, e)=>  {
       result.push({
-        text: $(e).text(),
-        herf: $(e).attr('href')
+        title: $(e).text(),
+        href: $(e).attr('href')
       })
   })
   return  result

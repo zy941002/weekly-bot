@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "unbuild",
-    "start": "nodemon --watch './**/*.{ts}' --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm' src/index.ts",
+    "schedule": "node './**/*.{ts}' --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm' src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -20,6 +20,7 @@
     "ts-node": "^10.7.0"
   },
   "devDependencies": {
+    "@types/node": "^17.0.23",
     "cheerio": "^1.0.0-rc.10",
     "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",

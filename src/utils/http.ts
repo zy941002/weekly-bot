@@ -15,6 +15,7 @@ function http(args: IhttpArgs): Promise<any> {
       method,
       headers: headers || {
         'Content-Type': 'application/json',
+        'charset': 'utf-8'
       },
       data
     }).then(response=> {
