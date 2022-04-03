@@ -11,7 +11,6 @@ import  salt from './utils/salt'
 dotenv.config()
 
 const { WEB_HOOKS, WEB_HOOKS_SCRETT } = process.env
-
 const turboGradient = gradient("#0099F7", "#F11712")
 
 enum Websites {
@@ -19,7 +18,7 @@ enum Websites {
   Node = 'https://nodeweekly.com/issues/latest?layout=bare',
   React = 'https://react.statuscode.com/issues/latest?layout=bare',
 }
-
+console.log(JSON.stringify({env: process.env}))
 function creatDingBot() {
   const timestamp = Date.now()
   const signStr = `&timestamp=${timestamp}&sign=${salt(WEB_HOOKS_SCRETT,  `${timestamp}\n${WEB_HOOKS_SCRETT}`)}`
